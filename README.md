@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Powered%20by-Remove.bg-blueviolet?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Free%20to%20Use-Yes-brightgreen?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/UI-AI%20Designed-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/UI-Chirag%20Mishra-purple?style=for-the-badge" />
 </p>
 
 ---
