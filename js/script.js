@@ -60,6 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
   uploadInput.addEventListener('change', () => {
     const file = uploadInput.files[0];
     if (file) {
+      if (file.size > 4 * 1024 * 1024) { // 4MB in bytes
+        alert('File is too large! Maximum allowed size is 4MB.');
+        uploadInput.value = '';
+        return;
+      }
       imageFile = file;
       const reader = new FileReader();
       reader.onload = e => {
