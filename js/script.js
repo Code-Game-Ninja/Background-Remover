@@ -84,11 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
     formData.append('size', 'auto');
 
     try {
-      const response = await fetch('https://api.remove.bg/v1.0/removebg', {
+      const response = await fetch('/api/remove-bg', {
         method: 'POST',
-        headers: {
-          'X-Api-Key': 'Rgqa7UueE7fA17NKZAz2Qvdf'
-        },
+        headers: {}, // Let browser set Content-Type for FormData
         body: formData
       });
 

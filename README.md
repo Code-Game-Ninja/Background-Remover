@@ -55,12 +55,9 @@ Background Remover/
 │   ├── background-anim.js
 │   └── effects.js
 │
-├── css/
-│   └── styles.css         # (optional, for custom styles)
-│
-├── assets/
-│   ├── images/            # (put your images here)
-│   └── lottie/            # (put custom lottie files here)
+├── api/
+│   └── remove-bg.js        
+
 ```
 
 ---
@@ -73,6 +70,34 @@ Background Remover/
 4. Download your new image with a transparent background!
 
 > **No installation or build required. 100% client-side.**
+
+---
+
+## 🛡️ Environment Variables & API Key Security
+
+This app uses the Remove.bg API key securely via a Vercel serverless function. **Do NOT expose your API key in frontend code.**
+
+### Local Development
+1. Create a `.env` file in your project root:
+   ```env
+   API_KEY=your_removebg_api_key_here
+   ```
+2. The serverless function in `/api/remove-bg.js` will read this key.
+
+### Vercel Deployment
+1. Go to your project on the Vercel dashboard.
+2. Navigate to **Settings → Environment Variables**.
+3. Add a new variable:
+   - **Name:** `API_KEY`
+   - **Value:** your Remove.bg API key
+   - **Environment:** Production/Preview/Development (as needed)
+
+---
+
+## 🔒 How It Works
+- The frontend sends image requests to `/api/remove-bg` (a Vercel serverless function).
+- The function reads your API key from the environment and proxies the request to Remove.bg.
+- **Your API key is never exposed to the browser.**
 
 ---
 
